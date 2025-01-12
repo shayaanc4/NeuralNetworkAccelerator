@@ -18,7 +18,7 @@ How It Works
 		•	The weights are generated using a software-based training process (python/tensorflow script) and saved in a hardware-compatible format.
 	2.	Input Data:
 		•	Input features (e.g., image data) are provided to the FPGA.
-		•	The system reads these inputs from memory or external peripherals.
+		•	The system reads these inputs from memory.
 	3.	Button-Triggered Inference:
 		•	Pressing a designated button triggers the control logic to start the forward propagation process.
 		•	The FPGA computes the activations layer by layer, using the stored weights and biases.
