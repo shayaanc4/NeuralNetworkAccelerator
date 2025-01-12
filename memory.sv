@@ -13,8 +13,6 @@ module memory (clk, mem, start_addr);
 
 	
 	initial begin
-
-	  // Use the file name with $readmemb
 		$display("Reading from file: %s", PARAM_STRING);
 		$readmemb(PARAM_STRING, temp_mem);
 	end
