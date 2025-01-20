@@ -38,3 +38,8 @@ This project is suitable for scenarios requiring fast, low-power inference, such
 	•	Edge computing
 	•	Embedded AI systems
 	•	Real-time object classification
+
+References
+
+	- Tisan, Alin & Oniga, Stefan & Mic, Daniel & Attila, Buchman. (2009). Digital Implementation of The Sigmoid Function for FPGA Circuits. ACTA TECHNICA NAPOCENSIS Electronics and Telecommunications
+ 	- Si, Jiong, "Neural Network in Hardware" (2019). UNLV Theses, Dissertations, Professional Papers, and Capstones. 3845. http://dx.doi.org/10.34917/18608784
