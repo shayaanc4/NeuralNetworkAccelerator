@@ -1,21 +1,28 @@
-module sigmoid(x, y);
+/* 
+	This function is based off a low-power piecewise second-order approximation of the sigmoid function adapted from:
+	Tisan, Alin & Oniga, Stefan & Mic, Daniel & Attila, Buchman. (2009). 
+	Digital Implementation of The Sigmoid Function for FPGA Circuits. 
+	ACTA TECHNICA NAPOCENSIS Electronics and Telecommunications
+*/
 
-input signed [31:0] x;
-output [31:0] y;
+module sigmoid(in, out);
+	
+   input logic signed [7:0] in;
+   output logic signed [15:0] out;
 
-    always_comb begin
-        if (x < -128) begin
-            y = 0; // Saturation at 0
-        end else if (x > 128) begin
-            y = 255; // Saturation at 1
-        end else if (x < -64) begin
-            y = (x + 128) >> 1; // Approximation for range [-128, -64]
-        end else if (x < 0) begin
-            y = (x + 64) + 64; // Approximation for range [-64, 0]
-        end else if (x < 64) begin
-            y = (x >> 1) + 128; // Approximation for range [0, 64]
-        end else begin
-            y = (x >> 2) + 192; // Approximation for range [64, 128]
-        end
-    end
+   logic signed [7:0] mag, mag_norm, sum;
+   logic signed [15:0] square, square_halved;
+
+   always_comb begin
+		mag = in[7] ? -in : in; // get the magnitude of the input
+		mag_norm = mag >>> 2; // normalize the magnitude between [0, 1]
+		sum = mag_norm + 8'b111_10000; // subtract 0.5
+
+		square = sum * sum; // square result
+
+		square_halved = square >>> 1; // divide by 2
+
+		out = in[7] ? square_halved : 16'b00000001_00000000 - square_halved;
+   end
+
 endmodule
