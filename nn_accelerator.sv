@@ -13,7 +13,7 @@ module neural_network_accelerator (clk, rst, ready_for_inf, inputs, fp_done, act
 	output logic fp_done;
 	output logic signed [15:0] activations_output [0:NUM_PERCEPTRONS_OUTPUT-1]; // (1,15)
 	
-	// Internal Variables
+	// Internal
 	logic en_hidden, en_output;
 	
 	logic [$clog2(NUM_INPUTS)-1:0] input_idx_hidden;
