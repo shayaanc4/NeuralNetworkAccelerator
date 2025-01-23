@@ -6,10 +6,12 @@
 */
 
 module sigmoid(in, out);
-	
+
+   // Input/Output
    input logic signed [7:0] in;
    output logic signed [15:0] out;
 
+   // Internal
    logic signed [7:0] mag, mag_norm, sum;
    logic signed [15:0] square, square_halved;
 
