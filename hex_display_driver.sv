@@ -1,6 +1,6 @@
 module hex_display (num, segments);
     
-	 input logic [3:0] num;     	// Input num (0-15)
+    input logic [3:0] num;     	// Input num (0-15)
     output logic [6:0] segments; // Active-low segments (a-g)
 
     always_comb begin
