@@ -5,14 +5,17 @@ module nna_control(CLOCK_50, KEY, SW, HEX0, HEX1, LEDR);
 	parameter NUM_PERCEPTRONS_HIDDEN = 64;
 	parameter NUM_PERCEPTRONS_OUTPUT = 10;
 
+	// Inputs
 	input logic CLOCK_50;
 	input logic [3:0] KEY; 
 	input logic [9:0] SW;
-	
+
+	// Outputs
 	output logic [6:0] HEX0;
 	output logic [6:0] HEX1;
 	output logic [9:0] LEDR;
-	
+
+	// Internal
 	logic [3:0] prediction;
 	logic [3:0] prediction_temp;
 	logic [3:0] label;
