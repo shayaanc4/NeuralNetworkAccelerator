@@ -74,7 +74,7 @@ module neural_network_accelerator (clk, rst, ready_for_inf, inputs, fp_done, act
 		end
 	endgenerate
 	
-	enum logic [2:0] {idle, hidden_active, output_active, delay2, done} current_state, next_state;
+	enum logic [2:0] {idle, hidden_active, output_active, done} current_state, next_state;
 
 	always_comb begin
 		en_hidden = 1'b0;
