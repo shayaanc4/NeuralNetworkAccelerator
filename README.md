@@ -6,8 +6,8 @@ This project implements a hardware-based neural network accelerator on the Alter
 Key Features
 
 	•	Pretrained Model Inference: Uses weights from a pretrained neural network model, stored in on-chip block memory, to perform forward propagation entirely in hardware.
-	•	Efficient Design: Implements parallel processing and pipelining to accelerate computations compared to traditional software implementations.
-	•	Input Control via Button Press: The system performs inference when a button is pressed, triggering the hardware logic to process the input data and produce its class prediction.
+	•	Efficient Design: Implements parallel processing to accelerate computations compared to traditional software implementations.
+	•	Input Control via Switch: The system performs inference when a switch is flicked, triggering the hardware logic to process the input data and produce its class prediction.
 	•	Modular SystemVerilog Design: Includes separate modules for weight memory management, activation computation, and control logic.
 	•	Expandable and Scalable: Supports modifications for different network architectures.
 
