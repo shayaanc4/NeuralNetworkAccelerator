@@ -1,7 +1,7 @@
-# NeuralNetworkAccelerator
-FPGA-based neural network accelerator implemented in SystemVerilog for efficient hardware inference.
+# FPGA Neural Network
+Hardware-based neural network accelerator implemented in SystemVerilog for efficient AI inference.
 
-This project implements a hardware-based neural network accelerator on the Altera DE0-CV FPGA in RTL using SystemVerilog. Designed for efficient inference, the system leverages a pretrained neural network with 3 dense layers, including an input layer, hidden layer, output/clasification layer. By pressing a button, the FPGA executes forward propagation to classify input data, making it a compact and responsive system for real-time predictions.
+This project implements a hardware-based neural network on the Altera DE0-CV FPGA in RTL using SystemVerilog. Designed for efficient inference, the system leverages a pretrained FCN neural network with 3 dense layers, including an input layer, hidden layer, output/clasification layer. By pressing a button, the FPGA executes forward propagation to classify input data, making it a compact and responsive system for real-time predictions.
 
 Key Features
 
